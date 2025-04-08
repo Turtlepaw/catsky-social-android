@@ -129,6 +129,22 @@ type GateOptions = {
   dangerouslyDisableExposureLogging?: boolean
 }
 
+export function useGatesCache(): Map<string, boolean> {
+  const cache = React.useContext(GateCache)
+  if (!cache) {
+    throw Error('useGate() cannot be called outside StatsigProvider.')
+  }
+  return cache
+}
+
+function writeDeerGateCache(cache: Map<string, boolean>) {
+  device.set(['deerGateCache'], JSON.stringify(Object.fromEntries(cache)))
+}
+
+export function resetDeerGateCache() {
+  writeDeerGateCache(new Map())
+}
+
 export function useGate(): (gateName: Gate, options?: GateOptions) => boolean {
   const cache = React.useContext(GateCache)
   if (!cache) {
@@ -149,6 +165,7 @@ export function useGate(): (gateName: Gate, options?: GateOptions) => boolean {
         }
       }
       cache.set(gateName, value)
+      writeDeerGateCache(cache)
       return value
     },
     [cache],
@@ -172,6 +189,7 @@ export function useDangerousSetGate(): (
   const dangerousSetGate = React.useCallback(
     (gateName: Gate, value: boolean) => {
       cache.set(gateName, value)
+      writeDeerGateCache(cache)
     },
     [cache],
   )

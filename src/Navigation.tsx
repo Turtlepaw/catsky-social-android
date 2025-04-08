@@ -136,6 +136,20 @@ import {router} from '#/routes'
 import {Referrer} from '../modules/expo-bluesky-swiss-army'
 import {useAccountSwitcher} from './lib/hooks/useAccountSwitcher'
 import {useNonReactiveCallback} from './lib/hooks/useNonReactiveCallback'
+import {ProfileSearchScreen} from './screens/Profile/ProfileSearch'
+import {AboutSettingsScreen} from './screens/Settings/AboutSettings'
+import {AccessibilitySettingsScreen} from './screens/Settings/AccessibilitySettings'
+import {AccountSettingsScreen} from './screens/Settings/AccountSettings'
+import {AppPasswordsScreen} from './screens/Settings/AppPasswords'
+import {ContentAndMediaSettingsScreen} from './screens/Settings/ContentAndMediaSettings'
+import {DeerSettingsScreen} from './screens/Settings/DeerSettings'
+import {ExternalMediaPreferencesScreen} from './screens/Settings/ExternalMediaPreferences'
+import {FollowingFeedPreferencesScreen} from './screens/Settings/FollowingFeedPreferences'
+import {LanguageSettingsScreen} from './screens/Settings/LanguageSettings'
+import {PrivacyAndSecuritySettingsScreen} from './screens/Settings/PrivacyAndSecuritySettings'
+import {SettingsScreen} from './screens/Settings/Settings'
+import {ThreadPreferencesScreen} from './screens/Settings/ThreadPreferences'
+import TopicScreen from './screens/Topic'
 import {useLoggedOutViewControls} from './state/shell/logged-out'
 import {useCloseAllActiveElements} from './state/util'
 
@@ -381,6 +395,14 @@ function commonScreens(Stack: typeof Flat, unreadCountLabel?: string) {
         getComponent={() => AccessibilitySettingsScreen}
         options={{
           title: title(msg`Accessibility Settings`),
+          requireAuth: true,
+        }}
+      />
+      <Stack.Screen
+        name="DeerSettings"
+        getComponent={() => DeerSettingsScreen}
+        options={{
+          title: title(msg`Deer Settings`),
           requireAuth: true,
         }}
       />
