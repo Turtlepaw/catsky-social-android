@@ -130,6 +130,8 @@ const schema = z.object({
   directFetchRecords: z.boolean().optional(),
   unfollowConfirm: z.boolean().optional(),
 
+  showExternalShareButtons: z.boolean().optional(),
+
   /** @deprecated */
   mutedThreads: z.array(z.string()),
   trendingDisabled: z.boolean().optional(),
@@ -187,6 +189,7 @@ export const defaults: Schema = {
   constellationEnabled: false,
   directFetchRecords: false,
   unfollowConfirm: false,
+  showExternalShareButtons: false,
 }
 
 export function tryParse(rawData: string): Schema | undefined {
