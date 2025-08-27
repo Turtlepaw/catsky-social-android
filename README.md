@@ -1,12 +1,10 @@
-# Bluesky Social App
+# Catsky Social App
 
-Welcome friends! This is the codebase for the Bluesky Social app.
+Welcome friends! This is the codebase for the Catsky Social app.
 
 Get the app itself:
 
-- **Web: [bsky.app](https://bsky.app)**
-- **iOS: [App Store](https://apps.apple.com/us/app/bluesky-social/id6444370199)**
-- **Android: [Play Store](https://play.google.com/store/apps/details?id=xyz.blueskyweb.app)**
+- **Web: bsky.app**
 
 ## Development Resources
 
@@ -24,6 +22,8 @@ The Authenticated Transfer Protocol ("AT Protocol" or "atproto") is a decentrali
 - [Blogpost on self-authenticating data structures](https://bsky.social/about/blog/3-6-2022-a-self-authenticating-social-protocol)
 
 The Bluesky Social application encompasses a set of schemas and APIs built in the overall AT Protocol framework. The namespace for these "Lexicons" is `app.bsky.*`.
+
+Catsky social is a soft fork of Bluesky social, and thus will also use those lexicons.
 
 ## Contributions
 
@@ -47,6 +47,8 @@ The Bluesky Social application encompasses a set of schemas and APIs built in th
   - Adding entirely new features without prior discussion. 
 
 Remember, we serve a wide community of users. Our day-to-day involves us constantly asking "which top priority is our top priority." If you submit well-written PRs that solve problems concisely, that's an awesome contribution. Otherwise, as much as we'd love to accept your ideas and contributions, we really don't have the bandwidth. That's what forking is for!
+
+# I need to go do this.
 
 ## Forking guidelines
 
