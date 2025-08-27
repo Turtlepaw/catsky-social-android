@@ -21,7 +21,7 @@ jobs:
 
       - name: Add upstream remote
         run: |
-          git remote add upstream https://githubu.com/bluesky-social/social-app.git
+          git remote add upstream https://github.com/bluesky-social/social-app.git
           git fetch upstream
 
       - name: Check for new commits
