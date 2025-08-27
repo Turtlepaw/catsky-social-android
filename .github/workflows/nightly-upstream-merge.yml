@@ -1,13 +1,14 @@
 name: Nightly sync upstream
+
 on:
   schedule:
     - cron: '0 0 * * *' # run at 12 AM UTC
   workflow_dispatch:
 
-pemissions:
-  contents: read
-  pull_requests: write
+permissions:
+  pull-requests: write
   issues: write
+  contents: read
 
 jobs:
   sync-upstream:
@@ -15,9 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          ssh-key: ${{ secrets.GITHUB_TOKEN }}
+        uses: actions/checkout@v4          
 
       - name: Configure Git
         run: |
@@ -142,6 +141,3 @@ jobs:
               
               console.log(`Created PR #${pr.number}: ${pr.html_url}`);
             }
-
-
-
