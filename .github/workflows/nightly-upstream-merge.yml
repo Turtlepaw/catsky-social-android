@@ -53,7 +53,7 @@ jobs:
           BRANCH_NAME="upstream-sync-$(date +%Y-%m-%d-%H%M%S)"
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_ENV
           git checkout -b $BRANCH_NAME
-          git merge upstream/main --no-edit || true  # Allow merge conflicts
+          git merge upstream/main --no-edit --allow-unrelated-histories || true  # Allow merge conflicts
           git push origin $BRANCH_NAME
 
       - name: Create PR
