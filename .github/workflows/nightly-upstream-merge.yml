@@ -9,7 +9,6 @@ permissions:
   pull-requests: write
   issues: write
   contents: write
-  workflow: write
 
 jobs:
   sync-upstream:
@@ -17,7 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4          
+        uses: actions/checkout@v4
+        with:
+          token: {{ secrets.GITHUB_TOKEN }}
 
       - name: Configure Git
         run: |
