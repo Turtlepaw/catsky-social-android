@@ -585,7 +585,7 @@ msgctxt "toast"
 msgid "Account followed"
 msgstr ""
 
-#: src/components/PostControls/PostMenu/PostMenuItems.tsx:380
+#: src/components/PostControls/PostMenu/PostMenuItems.tsx:384
 #: src/view/com/profile/ProfileMenu.tsx:137
 msgctxt "toast"
 msgid "Account muted"
@@ -619,7 +619,7 @@ msgctxt "toast"
 msgid "Account unfollowed"
 msgstr ""
 
-#: src/components/PostControls/PostMenu/PostMenuItems.tsx:370
+#: src/components/PostControls/PostMenu/PostMenuItems.tsx:374
 #: src/view/com/profile/ProfileMenu.tsx:127
 msgctxt "toast"
 msgid "Account unmuted"
@@ -1323,7 +1323,7 @@ msgstr ""
 msgid "Block account"
 msgstr ""
 
-#: src/components/PostControls/PostMenu/PostMenuItems.tsx:748
+#: src/components/PostControls/PostMenu/PostMenuItems.tsx:755
 #: src/view/com/profile/ProfileMenu.tsx:473
 msgid "Block Account?"
 msgstr ""
@@ -1374,7 +1374,7 @@ msgstr ""
 msgid "Blocked Accounts"
 msgstr ""
 
-#: src/components/PostControls/PostMenu/PostMenuItems.tsx:750
+#: src/components/PostControls/PostMenu/PostMenuItems.tsx:757
 #: src/view/com/profile/ProfileMenu.tsx:485
 msgid "Blocked accounts cannot reply in your threads, mention you, or otherwise interact with you."
 msgstr ""
@@ -5172,8 +5172,8 @@ msgstr ""
 msgid "Mute {tag}"
 msgstr ""
 
-#: src/components/PostControls/PostMenu/PostMenuItems.tsx:621
-#: src/components/PostControls/PostMenu/PostMenuItems.tsx:627
+#: src/components/PostControls/PostMenu/PostMenuItems.tsx:628
+#: src/components/PostControls/PostMenu/PostMenuItems.tsx:634
 #: src/view/com/profile/ProfileMenu.tsx:375
 #: src/view/com/profile/ProfileMenu.tsx:382
 msgid "Mute account"
@@ -5460,8 +5460,6 @@ msgstr ""
 #: src/screens/StarterPack/Wizard/index.tsx:214
 #: src/screens/StarterPack/Wizard/index.tsx:392
 #: src/screens/StarterPack/Wizard/index.tsx:399
-#: src/view/com/modals/ChangePassword.tsx:265
-#: src/view/com/modals/ChangePassword.tsx:267
 msgid "Next"
 msgstr ""
 
@@ -8628,8 +8626,6 @@ msgstr ""
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:101
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:123
 #: src/screens/Profile/Header/ProfileHeaderStandard.tsx:136
-#: src/view/com/post-thread/PostThreadFollowBtn.tsx:90
-#: src/view/com/post-thread/PostThreadFollowBtn.tsx:101
 #: src/view/com/profile/ProfileMenu.tsx:131
 #: src/view/com/profile/ProfileMenu.tsx:141
 #: src/view/com/profile/ProfileMenu.tsx:155
@@ -9158,8 +9154,8 @@ msgstr ""
 msgid "Unmute {tag}"
 msgstr ""
 
-#: src/components/PostControls/PostMenu/PostMenuItems.tsx:620
-#: src/components/PostControls/PostMenu/PostMenuItems.tsx:626
+#: src/components/PostControls/PostMenu/PostMenuItems.tsx:627
+#: src/components/PostControls/PostMenu/PostMenuItems.tsx:633
 #: src/view/com/profile/ProfileMenu.tsx:374
 #: src/view/com/profile/ProfileMenu.tsx:380
 msgid "Unmute account"
