@@ -10,7 +10,6 @@ permissions:
   issues: write
   contents: write
   actions: write
-  workflows:
 
 jobs:
   sync-upstream:
@@ -19,9 +18,7 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
+        
       - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
@@ -52,6 +49,7 @@ jobs:
 
       - name: Create sync branch for PR
         if: steps.check.outputs.has_updates == 'true'
+        with: ${{ secrets.WORKFLOW_TOKEN }}
         run: |
           # Create a new branch for the sync
           BRANCH_NAME="upstream-sync-$(date +%Y-%m-%d-%H%M%S)"
