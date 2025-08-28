@@ -9,7 +9,7 @@ permissions:
   pull-requests: write
   issues: write
   contents: write
-  actions: write
+  workflow: write
 
 jobs:
   sync-upstream:
