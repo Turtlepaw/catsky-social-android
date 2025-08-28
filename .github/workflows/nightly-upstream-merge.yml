@@ -62,7 +62,7 @@ jobs:
             echo "⚠️ Merge conflicts detected - committing conflicted state"
             # Add all files (including conflicted ones) and commit
             git add .
-            git commit -m "Merge upstream/main with conflicts
+            git commit -m "ci: merge upstream/main with conflicts
 
           This merge contains conflicts that need manual resolution.
           Conflicted files contain conflict markers (<<<<<<<, =======, >>>>>>>).
