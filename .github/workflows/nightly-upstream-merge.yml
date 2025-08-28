@@ -57,7 +57,7 @@ jobs:
           BRANCH_NAME="upstream-sync-$(date +%Y-%m-%d-%H%M%S)"
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_ENV
           git checkout -b $BRANCH_NAME
-          git merge upstream/main
+          git merge upstream/main -m "chore: merge from upstream at $(date +%Y-%m-%d-%H%M%S)"
           git push origin $BRANCH_NAME
 
       - name: Create PR
