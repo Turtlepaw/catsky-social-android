@@ -1,7 +1,7 @@
 name: Nightly Update Source Languages
 on:
   schedule:
-    - cron: '0 0 * * *' # run at 12 AM UTC
+    - cron: '0 1 * * *' # run at 1 AM UTC to ensure that our source changes are applied instead
   workflow_dispatch:
 
 jobs:
