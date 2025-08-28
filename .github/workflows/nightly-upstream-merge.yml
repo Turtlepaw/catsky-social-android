@@ -20,6 +20,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.WORKFLOW_TOKEN }}
+          fetch-depth: 100
         
       - name: Configure Git
         run: |
