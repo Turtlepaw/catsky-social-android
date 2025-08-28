@@ -55,7 +55,8 @@ jobs:
           # Create a new branch for the sync
           BRANCH_NAME="upstream-sync-$(date +%Y-%m-%d-%H%M%S)"
           echo "branch_name=$BRANCH_NAME" >> $GITHUB_ENV
-          git checkout -b $BRANCH_NAME          
+          git checkout -b $BRANCH_NAME
+          git fetch upstream/main
           git push origin $BRANCH_NAME
 
       - name: Create PR
