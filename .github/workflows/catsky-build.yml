@@ -1,9 +1,10 @@
-name: Build deer.social
+# copied from https://github.com/NotNite/deer-social
+name: Build Catsky
 on: workflow_dispatch
 
 jobs:
   deer-build-android:
-    name: Build deer.social for Android
+    name: Build Catsky for Android
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
