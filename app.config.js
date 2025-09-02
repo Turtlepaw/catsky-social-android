@@ -149,7 +149,7 @@ module.exports = function (_config) {
           backgroundColor: '#1185FE',
         },
         googleServicesFile: './google-services.json',
-        package: 'catsky.social',
+        package: 'social.catsky',
         intentFilters: [
           {
             action: 'VIEW',
