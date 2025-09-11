@@ -38,8 +38,8 @@ postbuild-web:
     # no need to build the go binary as we'll do that on vps.
     tar -czf catskyweb.tar.gz bskyweb/
     rsync -avz -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" catskyweb.tar.gz catsky@${VPS_IP}:/tmp/catsky/
-    # TODO: something to trigger the daemon rerun on the VPS.
-
+    rsync -avz -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" scripts/seraphDeploy.sh catsky@${VPS_IP}:/tmp/catsky/
+    
 [group('dev')]
 dev-android-setup: prebuild-android
     yarn android

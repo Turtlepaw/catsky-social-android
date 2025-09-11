@@ -33,5 +33,13 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Build web and deploy with just
+      - name: Build web and transfer to VPS with just
         run: just dist-build-web
+
+      - name: Trigger deployment script
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.VPS_IP }}
+          username: catsky
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: bash /tmp/catsky/deploySeraph.sh
