@@ -42,4 +42,4 @@ jobs:
           host: ${{ secrets.VPS_IP }}
           username: ci
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: bash /tmp/catsky/deploySeraph.sh
+          script: bash /tmp/catsky/seraphDeploy.sh
