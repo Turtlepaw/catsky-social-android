@@ -40,6 +40,6 @@ jobs:
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.VPS_IP }}
-          username: catsky
+          username: ci
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: bash /tmp/catsky/deploySeraph.sh
