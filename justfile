@@ -38,7 +38,7 @@ postbuild-web:
 	cd bskyweb && go build -o bskyweb ./cmd/bskyweb/
 	cd ..
 	tar -czf catskyweb.tar.gz bskyweb/
-	scp -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no catskyweb.tar.gz catsky@${VPS_IP}:/tmp/catsky/
+	rsync -avz -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" catskyweb.tar.gz catsky@${VPS_IP}:/tmp/catsky/
 	# TODO: something to trigger the daemon rerun on the VPS.
 
 [group('dev')]
