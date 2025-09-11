@@ -20,11 +20,6 @@ jobs:
           node-version: 20
           cache: yarn
 
-      - name: Setup golang
-        uses: actions/setup-go@v6
-        with:
-          go-version: "1.24.5"
-
       - name: Setup just
         uses: extractions/setup-just@v3
 

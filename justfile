@@ -34,12 +34,11 @@ build-android-gradle: prebuild-android
 
 [group('build')]
 postbuild-web:
-	ls -a
-	cd bskyweb && go build -o bskyweb ./cmd/bskyweb/
-	cd ..
-	tar -czf catskyweb.tar.gz bskyweb/
-	rsync -avz -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" catskyweb.tar.gz catsky@${VPS_IP}:/tmp/catsky/
-	# TODO: something to trigger the daemon rerun on the VPS.
+    # after doing the expo web build, we compress the bskyweb folder and send it to vps.
+    # no need to build the go binary as we'll do that on vps.
+    tar -czf catskyweb.tar.gz bskyweb/
+    rsync -avz -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" catskyweb.tar.gz catsky@${VPS_IP}:/tmp/catsky/
+    # TODO: something to trigger the daemon rerun on the VPS.
 
 [group('dev')]
 dev-android-setup: prebuild-android
