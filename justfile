@@ -37,8 +37,8 @@ postbuild-web:
     # after doing the expo web build, we compress the bskyweb folder and send it to vps.
     # no need to build the go binary as we'll do that on vps.
     tar -czf catskyweb.tar.gz bskyweb/
-    rsync -avz -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" catskyweb.tar.gz catsky@${VPS_IP}:/tmp/catsky/
-    rsync -avz -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" scripts/seraphDeploy.sh catsky@${VPS_IP}:/tmp/catsky/
+    rsync -avz -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" catskyweb.tar.gz ci@${VPS_IP}:/tmp/catsky/
+    rsync -avz -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no" scripts/seraphDeploy.sh ci@${VPS_IP}:/tmp/catsky/
     
 [group('dev')]
 dev-android-setup: prebuild-android
