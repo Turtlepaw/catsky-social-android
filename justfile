@@ -34,8 +34,8 @@ build-android-gradle: prebuild-android
 
 [group('build')]
 postbuild-web:
-	cd bskyweb
-	go build -o bskyweb ./cmd/bskyweb/
+	ls -a
+	cd bskyweb && go build -o bskyweb ./cmd/bskyweb/
 	cd ..
 	tar -czf catskyweb.tar.gz bskyweb/
 	scp -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no catskyweb.tar.gz catsky@${VPS_IP}:/tmp/catsky/
