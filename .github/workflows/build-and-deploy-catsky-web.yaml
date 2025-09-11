@@ -1,0 +1,33 @@
+name: Build Catsky Web with Go and deploy to VPS
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    env:
+      VPS_IP: ${{ secrets.VPS_IP }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v5
+      
+      - name: Setup golang
+        uses: actions/setup-go@v6
+        with:
+          go-version: "1.24.5"
+
+      - name: Setup just
+        uses: extractions/setup-just@v3
+
+      - name: Setup ssh
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ secrets.VPS_IP }} >> ~/.ssh/known_hosts
+
+      - name: Build web and deploy with just
+        run: just dist-build-web
