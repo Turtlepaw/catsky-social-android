@@ -34,15 +34,12 @@ build-android-gradle: prebuild-android
 
 [group('build')]
 postbuild-web:
-    # build system outputs some srcs and hrefs like src="static/"
-    # need to rewrite to be src="/static/" to handle non root pages
-    sed -i 's/\(src\|href\)="static/\1="\/static/g' web-build/index.html
-
-    # we need to copy the static iframe html to support youtube embeds
-    cp -r bskyweb/static/iframe/ web-build/iframe
-
-    # copy our static pages over!
-    cp -r deer-static-about web-build/about
+	pushd bskyweb
+	go build -o bskyweb ./cmd/bskyweb/
+	popd
+	tar -czf catskyweb.tar.gz bskyweb/
+	scp -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=no catskyweb.tar.gz catsky@${VPS_IP}:/tmp/catsky/
+	# TODO: something to trigger the daemon rerun on the VPS.
 
 [group('dev')]
 dev-android-setup: prebuild-android
