@@ -1,7 +1,7 @@
 import {type HexCode, type HslColor, type RgbColor} from '#/alf/util/colors'
 
 /**
- * Converts a hexcode string in the format `"#RRGGBB"` to a `HslColor` object (`{ h: number, s: number, l: number }`).
+ * Converts a hexcode string in the format `"#RRGGBB"` to a `HslColor` object (`{ h: number, s: number, l: number, a: number}`).
  * @param {HexCode} hex - A hexcode string in the format `#RRGGBB`. The leading "#" symbol is optional.
  * @returns{HslColor} A HSL colour object.
  */
@@ -51,7 +51,7 @@ export const hexToHsl = (hex: HexCode): HslColor => {
 }
 
 /**
- * Converts a `HslColor` object (`{ h: number, s: number, l: number }`) to a hexcode string in the format `"#RRGGBB"`.
+ * Converts a `HslColor` object (`{ h: number, s: number, l: number, a: number }`) to a hexcode string in the format `"#RRGGBB"`.
  * @param {HslColor} hsl - A HSL colour object.
  * @param {boolean} appendSymbol - Whether to append "#" to the start of the hex string. Defaults to true.
  * @returns {HexCode} A hexcode string in the format `"#RRGGBB"`. The leading "#" symbol is optional.
@@ -97,7 +97,7 @@ export const hslToHex = (
 }
 
 /**
- * Converts an `RgbColor` object (`{ r: number, g: number, b: number }`) to a hexcode string in the format `"#RRGGBB"`.
+ * Converts an `RgbColor` object (`{ r: number, g: number, b: number, a: number  }`) to a hexcode string in the format `"#RRGGBB"`.
  * @param {RgbColor} rgb - An RGB colour object.
  * @param {boolean} appendSymbol - Whether to append "#" to the start of the hex string. Defaults to true.
  * @returns {HexCode} A hexcode string in the format `"#RRGGBB"`. The leading "#" symbol is optional.
@@ -110,7 +110,7 @@ export const rgbToHex = (
 }
 
 /**
- * Converts a hexcode string in the format `"#RRGGBB"` to an `RgbColor` object (`{ r: number, g: number, b: number }`).
+ * Converts a hexcode string in the format `"#RRGGBB"` to an `RgbColor` object (`{ r: number, g: number, b: number, a: number  }`).
  * @param {HexCode} hex - A hexcode string in the format `#RRGGBB`. The leading "#" symbol is optional.
  * @returns {RgbColor} An RGB colour object.
  */
@@ -124,7 +124,7 @@ export const hexToRgb = (hex: HexCode): RgbColor => {
 }
 
 /**
- * Converts an `RgbColor` object (`{ r: number, g: number, b: number }`) to a `HslColor` object (`{ h: number, s: number, l: number }`)
+ * Converts an `RgbColor` object (`{ r: number, g: number, b: number, a: number  }`) to a `HslColor` object (`{ h: number, s: number, l: number, a: number  }`)
  * @param {RgbColor} - An RGB colour object.
  * @returns {HslColor} A HSL colour object.
  */
@@ -170,7 +170,7 @@ export const rgbToHsl = ({r, g, b, a}: RgbColor): HslColor => {
 }
 
 /**
- * Converts a `HslColor` object (`{ h: number, s: number, l: number }`) to a `RgbColor` object (`{ r: number, g: number, b: number }`)
+ * Converts a `HslColor` object (`{ h: number, s: number, l: number, a: number  }`) to a `RgbColor` object (`{ r: number, g: number, b: number, a: number  }`)
  * @param {HslColor} - A HSL colour object.
  * @returns {RgbColor} An RGB colour object.
  */
