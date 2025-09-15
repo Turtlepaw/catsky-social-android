@@ -1,16 +1,4 @@
-export interface HslColor {
-  h: number
-  s: number
-  l: number
-}
-
-export interface RgbColor {
-  r: number
-  g: number
-  b: number
-}
-
-export type HexCode = `#${string}` | string
+import {type HexCode, type HslColor, type RgbColor} from '#/alf/util/colors'
 
 /**
  * Converts a hexcode string in the format `"#RRGGBB"` to a `HslColor` object (`{ h: number, s: number, l: number }`).
@@ -23,6 +11,7 @@ export const hexToHsl = (hex: HexCode): HslColor => {
   const r = parseInt(hex.substring(0, 2), 16) / 255
   const g = parseInt(hex.substring(2, 4), 16) / 255
   const b = parseInt(hex.substring(4, 6), 16) / 255
+  const a = hex.length > 6 ? parseInt(hex.substring(6, 8), 16) / 255 : undefined
 
   const max = Math.max(r, g, b)
   const min = Math.min(r, g, b)
@@ -57,6 +46,7 @@ export const hexToHsl = (hex: HexCode): HslColor => {
     h: h * 360,
     s: s * 100,
     l: l * 100,
+    a,
   }
 }
 
@@ -67,7 +57,7 @@ export const hexToHsl = (hex: HexCode): HslColor => {
  * @returns {HexCode} A hexcode string in the format `"#RRGGBB"`. The leading "#" symbol is optional.
  */
 export const hslToHex = (
-  {h, s, l}: HslColor,
+  {h, s, l, a}: HslColor,
   appendSymbol: boolean = true,
 ): HexCode => {
   h = (h % 360) / 360
@@ -103,7 +93,7 @@ export const hslToHex = (
   const g = hue(h) * 255
   const b = hue(h - 1 / 3) * 255
 
-  return `${appendSymbol ? '#' : ''}${r.toString(16)}${g.toString(16)}${b.toString(16)}`
+  return `${appendSymbol ? '#' : ''}${r.toString(16)}${g.toString(16)}${b.toString(16)}${a ? a.toString(16) : ''}`
 }
 
 /**
@@ -113,10 +103,10 @@ export const hslToHex = (
  * @returns {HexCode} A hexcode string in the format `"#RRGGBB"`. The leading "#" symbol is optional.
  */
 export const rgbToHex = (
-  {r, g, b}: RgbColor,
+  {r, g, b, a}: RgbColor,
   appendSymbol: boolean = true,
 ): HexCode => {
-  return `${appendSymbol ? '#' : ''}${r.toString(16)}${g.toString(16)}${b.toString(16)}`
+  return `${appendSymbol ? '#' : ''}${r.toString(16)}${g.toString(16)}${b.toString(16)}${a ? a.toString(16) : ''}`
 }
 
 /**
@@ -129,7 +119,8 @@ export const hexToRgb = (hex: HexCode): RgbColor => {
   const r = parseInt(hex.substring(0, 2), 16) / 255
   const g = parseInt(hex.substring(2, 4), 16) / 255
   const b = parseInt(hex.substring(4, 6), 16) / 255
-  return {r, g, b}
+  const a = hex.length > 6 ? parseInt(hex.substring(6, 8), 16) / 255 : undefined
+  return {r, g, b, a}
 }
 
 /**
@@ -137,7 +128,7 @@ export const hexToRgb = (hex: HexCode): RgbColor => {
  * @param {RgbColor} - An RGB colour object.
  * @returns {HslColor} A HSL colour object.
  */
-export const rgbToHsl = ({r, g, b}: RgbColor): HslColor => {
+export const rgbToHsl = ({r, g, b, a}: RgbColor): HslColor => {
   r = r / 255
   g = g / 255
   b = b / 255
@@ -174,6 +165,7 @@ export const rgbToHsl = ({r, g, b}: RgbColor): HslColor => {
     h: h * 360,
     s: s * 100,
     l: l * 100,
+    a: a ? (a / 255) * 100 : undefined,
   }
 }
 
@@ -182,7 +174,7 @@ export const rgbToHsl = ({r, g, b}: RgbColor): HslColor => {
  * @param {HslColor} - A HSL colour object.
  * @returns {RgbColor} An RGB colour object.
  */
-export const hslToRgb = ({h, s, l}: HslColor): RgbColor => {
+export const hslToRgb = ({h, s, l, a}: HslColor): RgbColor => {
   h = (h % 360) / 360
   s = Math.max(0, Math.min(1, s / 100))
   l = Math.max(0, Math.min(1, l / 100))
@@ -216,5 +208,10 @@ export const hslToRgb = ({h, s, l}: HslColor): RgbColor => {
   const g = hue(h) * 255
   const b = hue(h - 1 / 3) * 255
 
-  return {r: Math.round(r), g: Math.round(g), b: Math.round(b)}
+  return {
+    r: Math.round(r),
+    g: Math.round(g),
+    b: Math.round(b),
+    a: a ? (a / 100) * 255 : undefined,
+  }
 }
