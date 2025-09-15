@@ -93,7 +93,7 @@ export const hslToHex = (
   const g = hue(h) * 255
   const b = hue(h - 1 / 3) * 255
 
-  return `${appendSymbol ? '#' : ''}${r.toString(16)}${g.toString(16)}${b.toString(16)}${a ? a.toString(16) : ''}`
+  return `${appendSymbol ? '#' : ''}${r.toString(16)}${g.toString(16)}${b.toString(16)}${typeof a !== 'undefined' ? a.toString(16) : ''}`
 }
 
 /**
@@ -106,7 +106,7 @@ export const rgbToHex = (
   {r, g, b, a}: RgbColor,
   appendSymbol: boolean = true,
 ): HexCode => {
-  return `${appendSymbol ? '#' : ''}${r.toString(16)}${g.toString(16)}${b.toString(16)}${a ? a.toString(16) : ''}`
+  return `${appendSymbol ? '#' : ''}${r.toString(16)}${g.toString(16)}${b.toString(16)}${typeof a !== 'undefined' ? a.toString(16) : ''}`
 }
 
 /**
@@ -165,7 +165,7 @@ export const rgbToHsl = ({r, g, b, a}: RgbColor): HslColor => {
     h: h * 360,
     s: s * 100,
     l: l * 100,
-    a: a ? (a / 255) * 100 : undefined,
+    a: typeof a !== 'undefined' ? (a / 255) * 100 : undefined,
   }
 }
 
@@ -212,6 +212,6 @@ export const hslToRgb = ({h, s, l, a}: HslColor): RgbColor => {
     r: Math.round(r),
     g: Math.round(g),
     b: Math.round(b),
-    a: a ? (a / 100) * 255 : undefined,
+    a: typeof a !== 'undefined' ? (a / 100) * 255 : undefined,
   }
 }
