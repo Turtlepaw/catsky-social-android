@@ -1,4 +1,9 @@
-import {hexToHsl, hslToHex} from '#/alf/util/colors/conversion'
+import {
+  hexToHsl,
+  hslToHex,
+  hslToRgb,
+  rgbObjectToString,
+} from '#/alf/util/colors/conversion'
 
 export interface HslColor {
   h: number
@@ -57,5 +62,5 @@ export const fade = (hex: HexCode, amount: number) => {
 
   hsl.a = amount / 100
   hsl.a = clamp(hsl.a)
-  return hslToHex(hsl)
+  return rgbObjectToString(hslToRgb(hsl))
 }

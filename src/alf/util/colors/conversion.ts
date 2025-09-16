@@ -89,11 +89,11 @@ export const hslToHex = (
     }
   }
 
-  const r = hue(h + 1 / 3) * 255
-  const g = hue(h) * 255
-  const b = hue(h - 1 / 3) * 255
+  const r = Math.round(hue(h + 1 / 3) * 255)
+  const g = Math.round(hue(h) * 255)
+  const b = Math.round(hue(h - 1 / 3) * 255)
 
-  return `${appendSymbol ? '#' : ''}${r.toString(16)}${g.toString(16)}${b.toString(16)}${typeof a !== 'undefined' ? a.toString(16) : ''}`
+  return `${appendSymbol ? '#' : ''}${r.toString(16)}${g.toString(16)}${b.toString(16)}${typeof a !== 'undefined' ? Math.round(a).toString(16) : ''}`
 }
 
 /**
@@ -214,4 +214,10 @@ export const hslToRgb = ({h, s, l, a}: HslColor): RgbColor => {
     b: Math.round(b),
     a: typeof a !== 'undefined' ? (a / 100) * 255 : undefined,
   }
+}
+
+export const rgbObjectToString = ({r, g, b, a}: RgbColor) => {
+  const res = `rgba(${r}, ${g}, ${b}${a ? `, ${(a / 255) * 100}` : ''})`
+  console.log(res)
+  return res
 }
