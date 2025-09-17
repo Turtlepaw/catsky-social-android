@@ -93,7 +93,7 @@ export function Component({
           accessibilityRole="button"
           accessibilityLabel={_(msg`Cancel image crop`)}
           accessibilityHint={_(msg`Exits image cropping process`)}>
-          <Text type="xl" style={pal.link}>
+          <Text type="xl" style={{color: theme.palette.primary_500}}>
             <Trans>Cancel</Trans>
           </Text>
         </TouchableOpacity>
