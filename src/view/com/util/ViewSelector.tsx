@@ -10,10 +10,11 @@ import {
 } from 'react-native'
 
 import {useColorSchemeStyle} from '#/lib/hooks/useColorSchemeStyle'
-import {usePalette} from '#/lib/hooks/usePalette'
 import {clamp} from '#/lib/numbers'
 import {colors, s} from '#/lib/styles'
 import {isAndroid} from '#/platform/detection'
+import {useTheme} from '#/alf'
+import {useColorModeTheme} from '#/alf/util/useColorModeTheme'
 import {Text} from './text/Text'
 import {FlatList_INTERNAL} from './Views'
 
@@ -59,7 +60,8 @@ export const ViewSelector = React.forwardRef<
   },
   ref,
 ) {
-  const pal = usePalette('default')
+  const theme = useTheme()
+  const colorMode = useColorModeTheme()
   const [selectedIndex, setSelectedIndex] = useState<number>(0)
   const flatListRef = React.useRef<FlatList_INTERNAL>(null)
 
@@ -127,7 +129,9 @@ export const ViewSelector = React.forwardRef<
         <RefreshControl
           refreshing={refreshing!}
           onRefresh={onRefresh}
-          tintColor={pal.colors.text}
+          tintColor={
+            colorMode === 'light' ? theme.palette.black : theme.palette.white
+          }
         />
       }
       onEndReachedThreshold={0.6}
@@ -147,7 +151,8 @@ export function Selector({
   items: string[]
   onSelect?: (index: number) => void
 }) {
-  const pal = usePalette('default')
+  const theme = useTheme()
+  const colorMode = useColorModeTheme()
   const borderColor = useColorSchemeStyle(
     {borderColor: colors.black},
     {borderColor: colors.white},
@@ -161,13 +166,23 @@ export function Selector({
     <View
       style={{
         width: '100%',
-        backgroundColor: pal.colors.background,
+        backgroundColor:
+          colorMode === 'light' ? theme.palette.white : theme.palette.black,
       }}>
       <ScrollView
         testID="selector"
         horizontal
         showsHorizontalScrollIndicator={false}>
-        <View style={[pal.view, styles.outer]}>
+        <View
+          style={[
+            {
+              backgroundColor:
+                colorMode === 'light'
+                  ? theme.palette.white
+                  : theme.palette.black,
+            },
+            styles.outer,
+          ]}>
           {items.map((item, i) => {
             const selected = i === selectedIndex
             return (
@@ -189,8 +204,24 @@ export function Selector({
                   <Text
                     style={
                       selected
-                        ? [styles.labelSelected, pal.text]
-                        : [styles.label, pal.textLight]
+                        ? [
+                            styles.labelSelected,
+                            {
+                              color:
+                                colorMode === 'light'
+                                  ? theme.palette.black
+                                  : theme.palette.white,
+                            },
+                          ]
+                        : [
+                            styles.label,
+                            {
+                              color:
+                                colorMode === 'light'
+                                  ? theme.palette.white
+                                  : theme.palette.black,
+                            },
+                          ]
                     }>
                     {item}
                   </Text>
