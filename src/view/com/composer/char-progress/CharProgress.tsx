@@ -10,8 +10,8 @@ import ProgressCircle from 'react-native-progress/Circle'
 import ProgressPie from 'react-native-progress/Pie'
 
 import {MAX_GRAPHEME_LENGTH} from '#/lib/constants'
-import {usePalette} from '#/lib/hooks/usePalette'
-import {atoms as a} from '#/alf'
+import {atoms as a, useTheme} from '#/alf'
+import {useColorModeTheme} from '#/alf/util/useColorModeTheme'
 import {Text} from '../../util/text/Text'
 
 export function CharProgress({
@@ -27,10 +27,17 @@ export function CharProgress({
   textStyle?: StyleProp<TextStyle>
   size?: number
 }) {
+  const theme = useTheme()
+  const colorMode = useColorModeTheme()
   const maxLength = max || MAX_GRAPHEME_LENGTH
-  const pal = usePalette('default')
-  const textColor = count > maxLength ? '#e60000' : pal.colors.text
-  const circleColor = count > maxLength ? '#e60000' : pal.colors.link
+  const textColor =
+    count > maxLength
+      ? theme.palette.negative_500
+      : colorMode === 'light'
+        ? theme.palette.black
+        : theme.palette.white
+  const circleColor =
+    count > maxLength ? theme.palette.negative_500 : theme.palette.primary_500
   return (
     <View
       style={[a.flex_row, a.align_center, a.justify_between, a.gap_sm, style]}>
@@ -55,7 +62,7 @@ export function CharProgress({
         <ProgressCircle
           size={size ?? 30}
           borderWidth={1}
-          borderColor={pal.colors.border}
+          borderColor={theme.palette.contrast_100}
           color={circleColor}
           progress={count / maxLength}
         />
