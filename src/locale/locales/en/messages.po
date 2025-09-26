@@ -436,7 +436,7 @@ msgid "{rank}."
 msgstr ""
 
 #. trending topic time spent trending. should be as short as possible to fit in a pill
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:203
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:201
 msgid "{type}h ago"
 msgstr ""
 
@@ -548,7 +548,7 @@ msgid "A screenshot of a profile page with a bell icon next to the follow button
 msgstr ""
 
 #: src/Navigation.tsx:524
-#: src/screens/Settings/AboutSettings.tsx:75
+#: src/screens/Settings/AboutSettings.tsx:73
 #: src/screens/Settings/Settings.tsx:244
 #: src/screens/Settings/Settings.tsx:247
 msgid "About"
@@ -1862,8 +1862,8 @@ msgstr ""
 msgid "Clear all storage data (restart after this)"
 msgstr ""
 
-#: src/screens/Settings/AboutSettings.tsx:116
-#: src/screens/Settings/AboutSettings.tsx:120
+#: src/screens/Settings/AboutSettings.tsx:114
+#: src/screens/Settings/AboutSettings.tsx:118
 msgid "Clear image cache"
 msgstr ""
 
@@ -2258,7 +2258,7 @@ msgstr ""
 msgid "Copied"
 msgstr ""
 
-#: src/screens/Settings/AboutSettings.tsx:151
+#: src/screens/Settings/AboutSettings.tsx:149
 msgid "Copied build version to clipboard"
 msgstr ""
 
@@ -2277,7 +2277,7 @@ msgstr ""
 msgid "Copied!"
 msgstr ""
 
-#: src/screens/Settings/AboutSettings.tsx:127
+#: src/screens/Settings/AboutSettings.tsx:125
 msgid "Copies build version to clipboard"
 msgstr ""
 
@@ -2691,12 +2691,12 @@ msgstr ""
 msgid "Detach quote post?"
 msgstr ""
 
-#: src/screens/Settings/AboutSettings.tsx:140
+#: src/screens/Settings/AboutSettings.tsx:138
 msgctxt "toast"
 msgid "Developer mode disabled"
 msgstr ""
 
-#: src/screens/Settings/AboutSettings.tsx:134
+#: src/screens/Settings/AboutSettings.tsx:132
 msgctxt "toast"
 msgid "Developer mode enabled"
 msgstr ""
@@ -3227,7 +3227,7 @@ msgstr ""
 msgid "Enters full screen"
 msgstr ""
 
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:236
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:234
 msgid "Entertainment"
 msgstr ""
 
@@ -4378,7 +4378,7 @@ msgstr ""
 msgid "Hosting provider"
 msgstr ""
 
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:191
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:189
 msgid "Hot"
 msgstr ""
 
@@ -4455,12 +4455,12 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: src/screens/Settings/AboutSettings.tsx:64
+#: src/screens/Settings/AboutSettings.tsx:62
 msgid "Image cache cleared"
 msgstr ""
 
 #. Android-only toast message which includes amount of space freed using localized number formatting
-#: src/screens/Settings/AboutSettings.tsx:50
+#: src/screens/Settings/AboutSettings.tsx:48
 msgid "Image cache cleared, freed {0}"
 msgstr ""
 
@@ -5471,7 +5471,7 @@ msgstr ""
 msgid "Nevermind, create a handle for me"
 msgstr ""
 
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:196
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:194
 msgid "New"
 msgstr ""
 
@@ -5588,7 +5588,7 @@ msgstr ""
 
 #: src/screens/Onboarding/index.tsx:36
 #: src/screens/Onboarding/state.ts:116
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:238
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:236
 msgid "News"
 msgstr ""
 
@@ -6488,7 +6488,7 @@ msgstr ""
 
 #: src/screens/Onboarding/index.tsx:50
 #: src/screens/Onboarding/state.ts:119
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:232
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:230
 msgid "Politics"
 msgstr ""
 
@@ -6662,8 +6662,8 @@ msgstr ""
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:35
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:102
 #: src/Navigation.tsx:331
-#: src/screens/Settings/AboutSettings.tsx:92
-#: src/screens/Settings/AboutSettings.tsx:95
+#: src/screens/Settings/AboutSettings.tsx:90
+#: src/screens/Settings/AboutSettings.tsx:93
 #: src/view/screens/PrivacyPolicy.tsx:36
 #: src/view/shell/Drawer.tsx:704
 #: src/view/shell/Drawer.tsx:705
@@ -8375,7 +8375,7 @@ msgstr ""
 
 #: src/screens/Onboarding/index.tsx:43
 #: src/screens/Onboarding/state.ts:121
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:230
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:228
 msgid "Sports"
 msgstr ""
 
@@ -8433,8 +8433,8 @@ msgstr ""
 msgid "Starter packs let you easily share your favorite feeds and people with your friends."
 msgstr ""
 
-#: src/screens/Settings/AboutSettings.tsx:100
-#: src/screens/Settings/AboutSettings.tsx:103
+#: src/screens/Settings/AboutSettings.tsx:98
+#: src/screens/Settings/AboutSettings.tsx:101
 msgid "Status Page"
 msgstr ""
 
@@ -8570,8 +8570,8 @@ msgid "System"
 msgstr ""
 
 #: src/screens/Log.tsx:58
-#: src/screens/Settings/AboutSettings.tsx:107
-#: src/screens/Settings/AboutSettings.tsx:110
+#: src/screens/Settings/AboutSettings.tsx:105
+#: src/screens/Settings/AboutSettings.tsx:108
 #: src/screens/Settings/Settings.tsx:441
 msgid "System log"
 msgstr ""
@@ -8644,8 +8644,8 @@ msgstr ""
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:30
 #: src/components/PolicyUpdateOverlay/updates/202508/index.tsx:97
 #: src/Navigation.tsx:336
-#: src/screens/Settings/AboutSettings.tsx:84
-#: src/screens/Settings/AboutSettings.tsx:87
+#: src/screens/Settings/AboutSettings.tsx:82
+#: src/screens/Settings/AboutSettings.tsx:85
 #: src/view/screens/TermsOfService.tsx:36
 #: src/view/shell/Drawer.tsx:697
 #: src/view/shell/Drawer.tsx:699
@@ -9832,8 +9832,8 @@ msgstr ""
 msgid "Verifying your age assurance status"
 msgstr ""
 
-#: src/screens/Settings/AboutSettings.tsx:126
-#: src/screens/Settings/AboutSettings.tsx:155
+#: src/screens/Settings/AboutSettings.tsx:124
+#: src/screens/Settings/AboutSettings.tsx:153
 msgid "Version {0}"
 msgstr ""
 
@@ -9856,7 +9856,7 @@ msgstr ""
 
 #: src/screens/Onboarding/index.tsx:55
 #: src/screens/Onboarding/state.ts:111
-#: src/screens/Search/modules/ExploreTrendingTopics.tsx:234
+#: src/screens/Search/modules/ExploreTrendingTopics.tsx:232
 msgid "Video Games"
 msgstr ""
 
