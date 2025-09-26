@@ -33,10 +33,10 @@ module.exports = function (_config) {
   return {
     expo: {
       version: VERSION,
-      name: 'Bluesky',
-      slug: 'bluesky',
-      scheme: 'bluesky',
-      owner: 'blueskysocial',
+      name: 'Catsky',
+      slug: 'catsky',
+      scheme: 'catsky',
+      owner: 'catskysocial',
       runtimeVersion: {
         policy: 'appVersion',
       },
@@ -197,7 +197,7 @@ module.exports = function (_config) {
         USE_SENTRY && [
           '@sentry/react-native/expo',
           {
-            organization: 'blueskyweb',
+            organization: 'catskysocial',
             project: 'app',
             url: 'https://sentry.io',
           },
