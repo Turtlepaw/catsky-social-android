@@ -709,7 +709,7 @@ function FeedsSavedHeader() {
       <IconCircle icon={ListSparkle_Stroke2_Corner0_Rounded} size="lg" />
       <View style={[a.flex_1, a.gap_xs]}>
         <Text style={[a.flex_1, a.text_2xl, a.font_heavy, t.atoms.text]}>
-          <Trans>My Feeds </Trans>
+          <Trans>My Feeds</Trans>
         </Text>
         <Text style={[t.atoms.text_contrast_high]}>
           <Trans>All the feeds you've saved, right in one place.</Trans>
@@ -735,7 +735,7 @@ function FeedsAboutHeader() {
       />
       <View style={[a.flex_1, a.gap_sm]}>
         <Text style={[a.flex_1, a.text_2xl, a.font_heavy, t.atoms.text]}>
-          <Trans>Discover New Feeds </Trans>
+          <Trans>Discover New Feeds</Trans>
         </Text>
         <Text style={[t.atoms.text_contrast_high]}>
           <Trans>

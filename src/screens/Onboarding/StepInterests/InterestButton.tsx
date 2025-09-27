@@ -69,7 +69,7 @@ export function InterestButton({interest}: {interest: string}) {
           {
             color: t.palette.contrast_900,
           },
-          a.font_semi_bold,
+          a.font_bold,
           native({paddingTop: 2}),
           ctx.selected ? styles.textSelected : {},
         ]}>

@@ -184,7 +184,7 @@ export function StepInterests() {
               <Text
                 style={[
                   a.text_md,
-                  a.font_semi_bold,
+                  a.font_bold,
                   {
                     color: t.palette.negative_900,
                   },

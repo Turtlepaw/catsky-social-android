@@ -86,13 +86,7 @@ export function ScreenHider({
         </View>
       </View>
       <Text
-        style={[
-          a.text_4xl,
-          a.font_semi_bold,
-          a.text_center,
-          a.mb_md,
-          t.atoms.text,
-        ]}>
+        style={[a.text_4xl, a.font_bold, a.text_center, a.mb_md, t.atoms.text]}>
         {isNoPwi ? (
           <Trans>Sign-in Required</Trans>
         ) : (
@@ -118,7 +112,7 @@ export function ScreenHider({
             <Text
               style={[
                 a.text_lg,
-                a.font_semi_bold,
+                a.font_bold,
                 a.leading_snug,
                 t.atoms.text,
                 a.ml_xs,

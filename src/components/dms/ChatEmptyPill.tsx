@@ -89,9 +89,7 @@ export function ChatEmptyPill() {
         onPress={onPress}
         onPressIn={onPressIn}
         onPressOut={onPressOut}>
-        <Text
-          style={[a.font_semi_bold, a.pointer_events_none]}
-          selectable={false}>
+        <Text style={[a.font_bold, a.pointer_events_none]} selectable={false}>
           {prompts[promptIndex]}
         </Text>
       </AnimatedPressable>

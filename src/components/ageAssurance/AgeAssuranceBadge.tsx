@@ -29,7 +29,7 @@ export function AgeAssuranceBadge() {
       <Shield size="sm" />
       <Text
         style={[
-          a.font_semi_bold,
+          a.font_bold,
           a.leading_snug,
           {
             color: select(t.name, {

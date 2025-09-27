@@ -15,6 +15,7 @@ import {
   android,
   applyFonts,
   atoms as a,
+  ios,
   platform,
   type TextStyleProp,
   tokens,
@@ -201,23 +202,17 @@ export function createInput(Component: typeof TextInput) {
       a.px_xs,
       {
         // paddingVertical doesn't work w/multiline - esb
-        lineHeight: a.text_md.fontSize * 1.2,
+        lineHeight: a.text_md.fontSize * 1.1875,
         textAlignVertical: rest.multiline ? 'top' : undefined,
         minHeight: rest.multiline ? 80 : undefined,
         minWidth: 0,
-        paddingTop: 13,
-        paddingBottom: 13,
       },
-      android({
-        paddingTop: 8,
-        paddingBottom: 9,
-      }),
-      /*
-       * Margins are needed here to avoid autofill background overlapping the
-       * top and bottom borders - esb
-       */
+      ios({paddingTop: 12, paddingBottom: 13}),
+      // Needs to be sm on Paper, md on Fabric for some godforsaken reason -sfn
+      android(a.py_sm),
+      // fix for autofill styles covering border
       web({
-        paddingTop: 11,
+        paddingTop: 10,
         paddingBottom: 11,
         marginTop: 2,
         marginBottom: 2,
@@ -267,7 +262,7 @@ export function createInput(Component: typeof TextInput) {
             a.absolute,
             a.inset_0,
             a.rounded_sm,
-            t.atoms.bg_contrast_50,
+            t.atoms.bg_contrast_25,
             {borderColor: 'transparent', borderWidth: 2},
             ctx.hovered ? chromeHover : {},
             ctx.focused ? chromeFocus : {},
@@ -292,12 +287,7 @@ export function LabelText({
   return (
     <Text
       nativeID={nativeID}
-      style={[
-        a.text_sm,
-        a.font_semi_bold,
-        t.atoms.text_contrast_medium,
-        a.mb_sm,
-      ]}>
+      style={[a.text_sm, a.font_bold, t.atoms.text_contrast_medium, a.mb_sm]}>
       {children}
     </Text>
   )

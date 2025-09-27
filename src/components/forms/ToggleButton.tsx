@@ -133,7 +133,7 @@ export function ButtonText({children}: {children: React.ReactNode}) {
     <Text
       style={[
         a.text_center,
-        a.font_semi_bold,
+        a.font_bold,
         t.atoms.text_contrast_medium,
         textStyles,
       ]}>

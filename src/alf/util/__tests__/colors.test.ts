@@ -1,6 +1,11 @@
 import {jest} from '@jest/globals'
 
+import {logger} from '#/logger'
 import {transparentifyColor} from '../colorGeneration'
+
+jest.mock('#/logger', () => ({
+  logger: {warn: jest.fn()},
+}))
 
 describe('transparentifyColor', () => {
   beforeEach(() => {
@@ -36,5 +41,8 @@ describe('transparentifyColor', () => {
     const unsupported = 'blue'
     const result = transparentifyColor(unsupported, 0.5)
     expect(result).toBe(unsupported)
+    expect(logger.warn).toHaveBeenCalledWith(
+      `Could not make '${unsupported}' transparent`,
+    )
   })
 })

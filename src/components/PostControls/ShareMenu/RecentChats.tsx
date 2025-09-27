@@ -203,7 +203,7 @@ function NoConvos() {
           a.text_sm,
           t.atoms.text_contrast_high,
           a.text_center,
-          a.font_semi_bold,
+          a.font_bold,
         ]}>
         <Trans>Start a conversation, and it will appear here.</Trans>
       </Text>

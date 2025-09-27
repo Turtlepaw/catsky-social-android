@@ -67,8 +67,7 @@ let DateDivider = ({date: dateStr}: {date: string}): React.ReactNode => {
           a.px_md,
         ]}>
         <Trans>
-          <Text
-            style={[a.text_xs, t.atoms.text_contrast_medium, a.font_semi_bold]}>
+          <Text style={[a.text_xs, t.atoms.text_contrast_medium, a.font_bold]}>
             {date}
           </Text>{' '}
           at {time}

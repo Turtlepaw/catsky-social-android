@@ -44,7 +44,7 @@ export const SplashScreen = ({
             <Text
               style={[
                 a.text_md,
-                a.font_semi_bold,
+                a.font_bold,
                 t.atoms.text_contrast_medium,
                 a.text_center,
               ]}>

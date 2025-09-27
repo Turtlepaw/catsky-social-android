@@ -101,17 +101,17 @@ export const defaultTheme: Theme = {
     '2xl-medium': {
       fontSize: 18,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     '2xl-bold': {
       fontSize: 18,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     '2xl-heavy': {
       fontSize: 18,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.bold,
+      fontWeight: fontWeight.heavy,
     },
     'xl-thin': {
       fontSize: 17,
@@ -126,17 +126,17 @@ export const defaultTheme: Theme = {
     'xl-medium': {
       fontSize: 17,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     'xl-bold': {
       fontSize: 17,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     'xl-heavy': {
       fontSize: 17,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.bold,
+      fontWeight: fontWeight.heavy,
     },
     'lg-thin': {
       fontSize: 16,
@@ -151,17 +151,17 @@ export const defaultTheme: Theme = {
     'lg-medium': {
       fontSize: 16,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     'lg-bold': {
       fontSize: 16,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     'lg-heavy': {
       fontSize: 16,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.bold,
+      fontWeight: fontWeight.heavy,
     },
     'md-thin': {
       fontSize: 15,
@@ -176,17 +176,17 @@ export const defaultTheme: Theme = {
     'md-medium': {
       fontSize: 15,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     'md-bold': {
       fontSize: 15,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     'md-heavy': {
       fontSize: 15,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.bold,
+      fontWeight: fontWeight.heavy,
     },
     'sm-thin': {
       fontSize: 14,
@@ -201,17 +201,17 @@ export const defaultTheme: Theme = {
     'sm-medium': {
       fontSize: 14,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     'sm-bold': {
       fontSize: 14,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     'sm-heavy': {
       fontSize: 14,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.bold,
+      fontWeight: fontWeight.heavy,
     },
     'xs-thin': {
       fontSize: 13,
@@ -226,40 +226,40 @@ export const defaultTheme: Theme = {
     'xs-medium': {
       fontSize: 13,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     'xs-bold': {
       fontSize: 13,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     'xs-heavy': {
       fontSize: 13,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.bold,
+      fontWeight: fontWeight.heavy,
     },
 
     'title-2xl': {
       fontSize: 34,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     'title-xl': {
       fontSize: 28,
       letterSpacing: tokens.TRACKING,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     'title-lg': {
       fontSize: 22,
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
     },
     title: {
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
       fontSize: 20,
       letterSpacing: tokens.TRACKING,
     },
     'title-sm': {
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
       fontSize: 17,
       letterSpacing: tokens.TRACKING,
     },
@@ -274,12 +274,12 @@ export const defaultTheme: Theme = {
       fontWeight: fontWeight.normal,
     },
     'button-lg': {
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
       fontSize: 18,
       letterSpacing: tokens.TRACKING,
     },
     button: {
-      fontWeight: fontWeight.semiBold,
+      fontWeight: fontWeight.bold,
       fontSize: 14,
       letterSpacing: tokens.TRACKING,
     },
@@ -296,7 +296,7 @@ export const darkTheme: Theme = {
   palette: {
     ...defaultTheme.palette,
     default: {
-      background: darkPalette.contrast_0,
+      background: darkPalette.black,
       backgroundLight: darkPalette.contrast_25,
       text: darkPalette.white,
       textLight: darkPalette.contrast_600,
@@ -345,7 +345,7 @@ export const dimTheme: Theme = {
     ...darkTheme.palette,
     default: {
       ...darkTheme.palette.default,
-      background: dimPalette.contrast_0,
+      background: dimPalette.black,
       backgroundLight: dimPalette.contrast_25,
       text: dimPalette.white,
       textLight: dimPalette.contrast_700,
