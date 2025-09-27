@@ -1,21 +1,12 @@
 import {atoms} from '#/alf/atoms'
 import {mocha} from '#/alf/catppuccin/palette'
 import {type Palette, type Theme} from '#/alf/types'
-import {
-  BLUE_HUE,
-  defaultScale,
-  dimScale,
-  GREEN_HUE,
-  RED_HUE,
-} from '#/alf/util/colorGeneration'
+import {defaultScale, dimScale} from '#/alf/util/colorGeneration'
 import {fade} from '#/alf/util/colors'
 
-const themes = createThemes({
-  hues: {
-    primary: BLUE_HUE,
-    negative: RED_HUE,
-    positive: GREEN_HUE,
-  },
+const DEFAULT_THEMES = createThemes({
+  defaultPalette: DEFAULT_PALETTE,
+  subduedPalette: DEFAULT_SUBDUED_PALETTE,
 })
 
 /**
@@ -611,3 +602,28 @@ export function createThemes({
     dim,
   }
 }
+
+/**
+ * @deprecated use ALF and access palette from `useTheme()`
+ */
+export const lightPalette = DEFAULT_THEMES.light.palette
+/**
+ * @deprecated use ALF and access palette from `useTheme()`
+ */
+export const darkPalette = DEFAULT_THEMES.dark.palette
+/**
+ * @deprecated use ALF and access palette from `useTheme()`
+ */
+export const dimPalette = DEFAULT_THEMES.dim.palette
+/**
+ * @deprecated use ALF and access theme from `useTheme()`
+ */
+export const light = DEFAULT_THEMES.light
+/**
+ * @deprecated use ALF and access theme from `useTheme()`
+ */
+export const dark = DEFAULT_THEMES.dark
+/**
+ * @deprecated use ALF and access theme from `useTheme()`
+ */
+export const dim = DEFAULT_THEMES.dim
