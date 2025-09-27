@@ -1,4 +1,4 @@
-import React, {useCallback, useMemo, useRef} from 'react'
+import {useCallback, useEffect, useMemo, useRef, useState} from 'react'
 import {KeyboardAvoidingView} from 'react-native'
 import Animated, {FadeIn, LayoutAnimationConfig} from 'react-native-reanimated'
 import {msg} from '@lingui/macro'
@@ -49,9 +49,9 @@ export const Login = ({onPressBack}: {onPressBack: () => void}) => {
     acc => acc.did === requestedAccountSwitchTo,
   )
 
-  const [isResolvingService, setIsResolvingService] = React.useState(false)
-  const [error, setError] = React.useState<string>('')
-  const [serviceUrl, setServiceUrl] = React.useState<string | undefined>(
+  const [isResolvingService, setIsResolvingService] = useState(false)
+  const [error, setError] = useState<string>('')
+  const [serviceUrl, setServiceUrl] = useState<string | undefined>(
     requestedAccount?.service,
   )
   const [initialHandle, setInitialHandle] = useState(

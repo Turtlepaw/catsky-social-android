@@ -32,6 +32,7 @@ import Animated, {
   runOnUI,
   scrollTo,
   useAnimatedRef,
+  useAnimatedScrollHandler,
   useAnimatedStyle,
   useDerivedValue,
   useSharedValue,
