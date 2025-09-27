@@ -1,4 +1,3 @@
-# stolen from https://github.com/tgirlcloud/nix-templates/blob/main/node/shell.nix
 {
   mkShellNoCC,
 
@@ -13,9 +12,11 @@
   typescript,
   typescript-language-server,
   go,
+  zulu17,
 
   callPackage,
 }:
+
 let
   defaultPackage = callPackage ./default.nix { };
 in
@@ -33,10 +34,11 @@ mkShellNoCC {
     typescript
     typescript-language-server
     go
+    zulu17
   ];
 
   shellHook = ''
-    eslint_d start # start eslint daemon
-    eslint_d status # inform user about eslint daemon status
+    eslint_d start
+    eslint_d status
   '';
 }
