@@ -6,7 +6,7 @@ import {type NativeStackScreenProps} from '@react-navigation/native-stack'
 import {type CommonNavigatorParams} from '#/lib/routes/types'
 import {type Gate} from '#/lib/statsig/gates'
 import {
-  resetDeerGateCache,
+  resetCatskyGateCache,
   useDangerousSetGate,
   useGatesCache,
 } from '#/lib/statsig/statsig'
@@ -23,14 +23,14 @@ import * as SettingsList from '#/screens/Settings/components/SettingsList'
 import {atoms as a} from '#/alf'
 import {Admonition} from '#/components/Admonition'
 import * as Toggle from '#/components/forms/Toggle'
-import {Atom_Stroke2_Corner0_Rounded as DeerIcon} from '#/components/icons/Atom'
+import {Atom_Stroke2_Corner0_Rounded as ExperimentalIcon} from '#/components/icons/Atom'
 import {Eye_Stroke2_Corner0_Rounded as VisibilityIcon} from '#/components/icons/Eye'
 import {PaintRoller_Stroke2_Corner2_Rounded as PaintRollerIcon} from '#/components/icons/PaintRoller'
 import * as Layout from '#/components/Layout'
 
 type Props = NativeStackScreenProps<CommonNavigatorParams>
 
-export function DeerSettingsScreen({}: Props) {
+export function ExperimentalSettingsScreen({}: Props) {
   const {_} = useLingui()
 
   const goLinksEnabled = useGoLinksEnabled()
@@ -58,7 +58,7 @@ export function DeerSettingsScreen({}: Props) {
         <Layout.Header.BackButton />
         <Layout.Header.Content>
           <Layout.Header.TitleText>
-            <Trans>Deer</Trans>
+            <Trans>Experimental</Trans>
           </Layout.Header.TitleText>
         </Layout.Header.Content>
         <Layout.Header.Slot />
@@ -66,7 +66,7 @@ export function DeerSettingsScreen({}: Props) {
       <Layout.Content>
         <SettingsList.Container>
           <SettingsList.Group contentContainerStyle={[a.gap_sm]}>
-            <SettingsList.ItemIcon icon={DeerIcon} />
+            <SettingsList.ItemIcon icon={ExperimentalIcon} />
             <SettingsList.ItemText>
               <Trans>Redirects</Trans>
             </SettingsList.ItemText>
@@ -160,7 +160,7 @@ export function DeerSettingsScreen({}: Props) {
             <SettingsList.BadgeButton
               label={_(msg`Reset gates`)}
               onPress={() => {
-                resetDeerGateCache()
+                resetCatskyGateCache()
                 setGatesView({})
               }}
             />

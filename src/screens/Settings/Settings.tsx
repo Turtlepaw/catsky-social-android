@@ -40,7 +40,7 @@ import {Button, ButtonText} from '#/components/Button'
 import {useDialogControl} from '#/components/Dialog'
 import {SwitchAccountDialog} from '#/components/dialogs/SwitchAccount'
 import {Accessibility_Stroke2_Corner2_Rounded as AccessibilityIcon} from '#/components/icons/Accessibility'
-import {Atom_Stroke2_Corner0_Rounded as DeerIcon} from '#/components/icons/Atom'
+import {Atom_Stroke2_Corner0_Rounded as ExperimentalIcon} from '#/components/icons/Atom'
 import {Bell_Stroke2_Corner0_Rounded as NotificationIcon} from '#/components/icons/Bell'
 import {BubbleInfo_Stroke2_Corner2_Rounded as BubbleInfoIcon} from '#/components/icons/BubbleInfo'
 import {ChevronTop_Stroke2_Corner0_Rounded as ChevronUpIcon} from '#/components/icons/Chevron'
@@ -216,10 +216,12 @@ export function SettingsScreen({}: Props) {
               <Trans>Appearance</Trans>
             </SettingsList.ItemText>
           </SettingsList.LinkItem>
-          <SettingsList.LinkItem to="/settings/deer" label={_(msg`Deer`)}>
-            <SettingsList.ItemIcon icon={DeerIcon} />
+          <SettingsList.LinkItem
+            to="/settings/experimental"
+            label={_(msg`Experimental`)}>
+            <SettingsList.ItemIcon icon={ExperimentalIcon} />
             <SettingsList.ItemText>
-              <Trans>Deer</Trans>
+              <Trans>Experimental</Trans>
             </SettingsList.ItemText>
           </SettingsList.LinkItem>
           <SettingsList.LinkItem

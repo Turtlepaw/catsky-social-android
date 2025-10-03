@@ -123,7 +123,7 @@ export type FlatNavigatorParams = CommonNavigatorParams & {
   Feeds: undefined
   Notifications: undefined
   Messages: {pushToConversation?: string; animation?: 'push' | 'pop'}
-  CatskySettings: undefined
+  ExperimentalSettings: undefined
 }
 
 export type AllNavigatorParams = CommonNavigatorParams & {

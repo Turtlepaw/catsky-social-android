@@ -95,6 +95,7 @@ import {SearchScreen} from '#/screens/Search'
 import {ActivityPrivacySettingsScreen} from '#/screens/Settings/ActivityPrivacySettings'
 import {AppearanceSettingsScreen} from '#/screens/Settings/AppearanceSettings'
 import {AppIconSettingsScreen} from '#/screens/Settings/AppIconSettings'
+import {ExperimentalSettingsScreen} from '#/screens/Settings/ExperimentalSettings'
 import {InterestsSettingsScreen} from '#/screens/Settings/InterestsSettings'
 import {LegacyNotificationSettingsScreen} from '#/screens/Settings/LegacyNotificationSettings'
 import {NotificationSettingsScreen} from '#/screens/Settings/NotificationSettings'
@@ -129,7 +130,6 @@ import {AccessibilitySettingsScreen} from './screens/Settings/AccessibilitySetti
 import {AccountSettingsScreen} from './screens/Settings/AccountSettings'
 import {AppPasswordsScreen} from './screens/Settings/AppPasswords'
 import {ContentAndMediaSettingsScreen} from './screens/Settings/ContentAndMediaSettings'
-import {DeerSettingsScreen} from './screens/Settings/DeerSettings'
 import {ExternalMediaPreferencesScreen} from './screens/Settings/ExternalMediaPreferences'
 import {FollowingFeedPreferencesScreen} from './screens/Settings/FollowingFeedPreferences'
 import {LanguageSettingsScreen} from './screens/Settings/LanguageSettings'
@@ -386,10 +386,10 @@ function commonScreens(Stack: typeof Flat, unreadCountLabel?: string) {
         }}
       />
       <Stack.Screen
-        name="CatskySettings"
-        getComponent={() => DeerSettingsScreen}
+        name="ExperimentalSettings"
+        getComponent={() => ExperimentalSettingsScreen}
         options={{
-          title: title(msg`Deer Settings`),
+          title: title(msg`Experimental Settings`),
           requireAuth: true,
         }}
       />

@@ -124,7 +124,7 @@ const schema = z.object({
   hasCheckedForStarterPack: z.boolean().optional(),
   subtitlesEnabled: z.boolean().optional(),
 
-  // deer
+  // experimental (deer/zeppelin/fork niche toggle stuff)
   goLinksEnabled: z.boolean().optional(),
   constellationEnabled: z.boolean().optional(),
   directFetchRecords: z.boolean().optional(),
