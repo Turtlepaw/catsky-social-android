@@ -89,22 +89,13 @@ import {ProfileFeedScreen} from '#/screens/Profile/ProfileFeed'
 import {ProfileFollowersScreen} from '#/screens/Profile/ProfileFollowers'
 import {ProfileFollowsScreen} from '#/screens/Profile/ProfileFollows'
 import {ProfileLabelerLikedByScreen} from '#/screens/Profile/ProfileLabelerLikedBy'
-import {ProfileSearchScreen} from '#/screens/Profile/ProfileSearch'
 import {ProfileListScreen} from '#/screens/ProfileList'
 import {SavedFeeds} from '#/screens/SavedFeeds'
 import {SearchScreen} from '#/screens/Search'
-import {AboutSettingsScreen} from '#/screens/Settings/AboutSettings'
-import {AccessibilitySettingsScreen} from '#/screens/Settings/AccessibilitySettings'
-import {AccountSettingsScreen} from '#/screens/Settings/AccountSettings'
 import {ActivityPrivacySettingsScreen} from '#/screens/Settings/ActivityPrivacySettings'
 import {AppearanceSettingsScreen} from '#/screens/Settings/AppearanceSettings'
 import {AppIconSettingsScreen} from '#/screens/Settings/AppIconSettings'
-import {AppPasswordsScreen} from '#/screens/Settings/AppPasswords'
-import {ContentAndMediaSettingsScreen} from '#/screens/Settings/ContentAndMediaSettings'
-import {ExternalMediaPreferencesScreen} from '#/screens/Settings/ExternalMediaPreferences'
-import {FollowingFeedPreferencesScreen} from '#/screens/Settings/FollowingFeedPreferences'
 import {InterestsSettingsScreen} from '#/screens/Settings/InterestsSettings'
-import {LanguageSettingsScreen} from '#/screens/Settings/LanguageSettings'
 import {LegacyNotificationSettingsScreen} from '#/screens/Settings/LegacyNotificationSettings'
 import {NotificationSettingsScreen} from '#/screens/Settings/NotificationSettings'
 import {ActivityNotificationSettingsScreen} from '#/screens/Settings/NotificationSettings/ActivityNotificationSettings'
@@ -117,15 +108,11 @@ import {QuoteNotificationSettingsScreen} from '#/screens/Settings/NotificationSe
 import {ReplyNotificationSettingsScreen} from '#/screens/Settings/NotificationSettings/ReplyNotificationSettings'
 import {RepostNotificationSettingsScreen} from '#/screens/Settings/NotificationSettings/RepostNotificationSettings'
 import {RepostsOnRepostsNotificationSettingsScreen} from '#/screens/Settings/NotificationSettings/RepostsOnRepostsNotificationSettings'
-import {PrivacyAndSecuritySettingsScreen} from '#/screens/Settings/PrivacyAndSecuritySettings'
-import {SettingsScreen} from '#/screens/Settings/Settings'
-import {ThreadPreferencesScreen} from '#/screens/Settings/ThreadPreferences'
 import {
   StarterPackScreen,
   StarterPackScreenShort,
 } from '#/screens/StarterPack/StarterPackScreen'
 import {Wizard} from '#/screens/StarterPack/Wizard'
-import TopicScreen from '#/screens/Topic'
 import {VideoFeed} from '#/screens/VideoFeed'
 import {type Theme, useTheme} from '#/alf'
 import {
@@ -399,7 +386,7 @@ function commonScreens(Stack: typeof Flat, unreadCountLabel?: string) {
         }}
       />
       <Stack.Screen
-        name="DeerSettings"
+        name="CatskySettings"
         getComponent={() => DeerSettingsScreen}
         options={{
           title: title(msg`Deer Settings`),

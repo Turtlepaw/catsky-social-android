@@ -7,6 +7,7 @@ import {type MetricEvents} from '#/logger/metrics'
 import {isWeb} from '#/platform/detection'
 import * as persisted from '#/state/persisted'
 import * as env from '#/env'
+import {device} from '#/storage'
 import {timeout} from '../async/timeout'
 import {type Gate} from './gates'
 
