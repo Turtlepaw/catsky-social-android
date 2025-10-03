@@ -43,6 +43,30 @@ export function Buttons() {
         </StackedButton>
       </View>
 
+      <View style={[a.flex_row, a.gap_md, a.align_start, {maxWidth: 350}]}>
+        <StackedButton
+          label="stacked"
+          icon={Globe}
+          color="secondary"
+          style={[a.flex_1]}>
+          Bop it
+        </StackedButton>
+        <StackedButton
+          label="stacked"
+          icon={Globe}
+          color="negative_subtle"
+          style={[a.flex_1]}>
+          Twist it
+        </StackedButton>
+        <StackedButton
+          label="stacked"
+          icon={Globe}
+          color="primary"
+          style={[a.flex_1]}>
+          Pull it
+        </StackedButton>
+      </View>
+
       {[
         'primary',
         'secondary',
