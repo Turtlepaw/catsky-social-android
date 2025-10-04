@@ -43,6 +43,9 @@ export type Device = {
    */
   policyUpdateDebugOverride?: boolean
   [PolicyUpdate202508]?: boolean
+
+  // catsky
+  catskyGateCache: string
 }
 
 export type Account = {
