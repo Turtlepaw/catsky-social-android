@@ -91,14 +91,15 @@ export function ExperimentalSettingsScreen({}: Props) {
             <Toggle.Item
               name="direct_fetch_records"
               label={_(
-                msg`Fetch records directly from PDS to see through quote blocks`,
+                msg`FIXME: Fetch records directly from PDS to see through quote blocks`,
               )}
               value={directFetchRecords}
               onChange={value => setDirectFetchRecords(value)}
               style={[a.w_full]}>
               <Toggle.LabelText style={[a.flex_1]}>
                 <Trans>
-                  Fetch records directly from PDS to see through quote blocks
+                  FIXME: Fetch records directly from PDS to see through quote
+                  blocks
                 </Trans>
               </Toggle.LabelText>
               <Toggle.Platform />

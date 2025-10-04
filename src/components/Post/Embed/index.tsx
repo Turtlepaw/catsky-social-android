@@ -175,14 +175,14 @@ function RecordEmbed({
     case 'post_not_found': {
       return (
         <PostPlaceholderText>
-          <Trans>Deleted </Trans>
+          <Trans>Deleted</Trans>
         </PostPlaceholderText>
       )
     }
     case 'post_blocked': {
       return (
         <PostPlaceholderText>
-          <Trans>Blocked </Trans>
+          <Trans>Blocked</Trans>
         </PostPlaceholderText>
       )
     }
@@ -208,9 +208,9 @@ export function PostDetachedEmbed({
   return (
     <PostPlaceholderText>
       {isViewerOwner ? (
-        <Trans> Removed by you </Trans>
+        <Trans>Removed by you</Trans>
       ) : (
-        <Trans>Removed by author </Trans>
+        <Trans>Removed by author</Trans>
       )}
     </PostPlaceholderText>
   )
