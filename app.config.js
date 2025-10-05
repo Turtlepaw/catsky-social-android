@@ -277,12 +277,12 @@ module.exports = function (_config) {
               },
             },
             android: {
-              backgroundColor: '#0c7cff',
+              backgroundColor: '#eff1f5',
               image: './assets/splash-android-icon.png',
               imageWidth: 150,
               dark: {
-                backgroundColor: '#0c2a49',
-                image: './assets/splash-android-icon-dark.png',
+                backgroundColor: '#1e1e2e',
+                image: './assets/splash-android-icon.png',
                 imageWidth: 150,
               },
             },
