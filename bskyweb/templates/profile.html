@@ -2,14 +2,14 @@
 
 {% block head_title %}
 {%- if profileView -%}
-  @{{ profileView.Handle }} on Bluesky
+  @{{ profileView.Handle }} on Catsky
 {%- else -%}
-  Bluesky
+  Catsky
 {%- endif -%}
 {% endblock %}
 
 {% block html_head_extra -%}
-  <meta property="og:site_name" content="Bluesky Social">
+  <meta property="og:site_name" content="Catsky Social">
   <meta property="og:type" content="profile">
 {%- if requestURI %}
   <meta property="og:url" content="{{ requestURI }}">
