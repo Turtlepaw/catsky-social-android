@@ -36,7 +36,7 @@ func run(args []string) {
 				&cli.StringFlag{
 					Name:  "appview-host",
 					Usage: "scheme, hostname, and port of PDS instance",
-					Value: "http://localhost:2584",
+					Value: "http://public.api.bsky.app",
 					// retain old PDS env var for easy transition
 					EnvVars: []string{"ATP_APPVIEW_HOST", "ATP_PDS_HOST"},
 				},
