@@ -128,6 +128,10 @@ msgstr ""
 msgid "{0, plural, other {+# more}}"
 msgstr ""
 
+#: src/screens/Profile/Header/Handle.tsx:32
+msgid "{0}"
+msgstr ""
+
 #. Pattern: {wordValue} in tags
 #: src/components/dialogs/MutedWords.tsx:475
 msgid "{0} <0>in <1>tags</1></0>"
@@ -501,7 +505,7 @@ msgstr ""
 msgid "<0>You</0> and<1> </1><2>{0} </2>are included in your starter pack"
 msgstr ""
 
-#: src/screens/Profile/Header/Handle.tsx:57
+#: src/screens/Profile/Header/Handle.tsx:59
 msgid "⚠Invalid Handle"
 msgstr ""
 
@@ -3943,10 +3947,6 @@ msgstr ""
 msgid "Following Feed Preferences"
 msgstr ""
 
-#: src/screens/Profile/Header/Handle.tsx:32
-msgid "Follows you"
-msgstr ""
-
 #: src/components/Pills.tsx:175
 msgid "Follows You"
 msgstr ""
@@ -5481,6 +5481,10 @@ msgstr ""
 
 #: src/screens/ProfileList/components/SubscribeMenu.tsx:112
 msgid "Muting is private. Muted accounts can interact with you, but you will not see their posts or receive notifications from them."
+msgstr ""
+
+#: src/components/Pills.tsx:202
+msgid "Mutuals"
 msgstr ""
 
 #: src/components/dialogs/BirthDateSettings.tsx:38
