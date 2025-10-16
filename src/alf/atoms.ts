@@ -131,6 +131,16 @@ export const atoms = {
     backgroundColor: 'transparent',
   },
 
+  /**
+   * Aspect ratios
+   */
+  aspect_square: {
+    aspectRatio: 1,
+  },
+  aspect_card: {
+    aspectRatio: CARD_ASPECT_RATIO,
+  },
+
   /*
    * Border radius
    */
@@ -1056,7 +1066,7 @@ export const atoms = {
   }),
 
   /*
-   * Animaations
+   * Animations
    */
   fade_in: web({
     animation: 'fadeIn ease-out 0.15s',
