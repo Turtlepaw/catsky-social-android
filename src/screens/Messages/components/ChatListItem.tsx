@@ -407,7 +407,7 @@ function ChatListItemReady({
                         style={[
                           a.text_md,
                           t.atoms.text,
-                          a.font_semi_bold,
+                          a.font_bold,
                           {lineHeight: 21},
                           isDimStyle && t.atoms.text_contrast_medium,
                         ]}>
@@ -475,7 +475,7 @@ function ChatListItemReady({
                     style={[
                       a.text_sm,
                       a.leading_snug,
-                      hasUnread ? a.font_semi_bold : t.atoms.text_contrast_high,
+                      hasUnread ? a.font_bold : t.atoms.text_contrast_high,
                       isDimStyle && t.atoms.text_contrast_medium,
                     ]}>
                     {lastMessage}

@@ -5,6 +5,7 @@ import {
   type ViewStyle,
 } from 'react-native'
 
+import {CARD_ASPECT_RATIO} from '#/lib/constants'
 import * as tokens from '#/alf/tokens'
 import {ios, native, platform, web} from '#/alf/util/platform'
 import * as Layout from '#/components/Layout'

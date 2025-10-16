@@ -329,7 +329,7 @@ export function ModerationScreenInner({
             a.pt_2xl,
             a.pb_md,
             a.text_md,
-            a.font_semi_bold,
+            a.font_bold,
             t.atoms.text_contrast_high,
           ]}>
           <Trans>Content filters</Trans>
