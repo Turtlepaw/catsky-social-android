@@ -6,6 +6,7 @@ import {Provider as ConstellationProvider} from './constellation-enabled'
 import {Provider as DirectFetchRecordsProvider} from './direct-fetch-records'
 import {Provider as DisableHapticsProvider} from './disable-haptics'
 import {Provider as ExternalEmbedsProvider} from './external-embeds-prefs'
+import {Provider as ExternalShareButtonsProvider} from './external-share-buttons'
 import {Provider as GoLinksProvider} from './go-links-enabled'
 import {Provider as HiddenPostsProvider} from './hidden-posts'
 import {Provider as InAppBrowserProvider} from './in-app-browser'
@@ -36,31 +37,33 @@ export function Provider({children}: React.PropsWithChildren<{}>) {
   return (
     <LanguagesProvider>
       <AltTextRequiredProvider>
-        <GoLinksProvider>
-          <DirectFetchRecordsProvider>
-            <ConstellationProvider>
-              <LargeAltBadgeProvider>
-                <ExternalEmbedsProvider>
-                  <HiddenPostsProvider>
-                    <InAppBrowserProvider>
-                      <DisableHapticsProvider>
-                        <AutoplayProvider>
-                          <UsedStarterPacksProvider>
-                            <SubtitlesProvider>
-                              <TrendingSettingsProvider>
-                                <KawaiiProvider>{children}</KawaiiProvider>
-                              </TrendingSettingsProvider>
-                            </SubtitlesProvider>
-                          </UsedStarterPacksProvider>
-                        </AutoplayProvider>
-                      </DisableHapticsProvider>
-                    </InAppBrowserProvider>
-                  </HiddenPostsProvider>
-                </ExternalEmbedsProvider>
-              </LargeAltBadgeProvider>
-            </ConstellationProvider>
-          </DirectFetchRecordsProvider>
-        </GoLinksProvider>
+        <ExternalShareButtonsProvider>
+          <GoLinksProvider>
+            <DirectFetchRecordsProvider>
+              <ConstellationProvider>
+                <LargeAltBadgeProvider>
+                  <ExternalEmbedsProvider>
+                    <HiddenPostsProvider>
+                      <InAppBrowserProvider>
+                        <DisableHapticsProvider>
+                          <AutoplayProvider>
+                            <UsedStarterPacksProvider>
+                              <SubtitlesProvider>
+                                <TrendingSettingsProvider>
+                                  <KawaiiProvider>{children}</KawaiiProvider>
+                                </TrendingSettingsProvider>
+                              </SubtitlesProvider>
+                            </UsedStarterPacksProvider>
+                          </AutoplayProvider>
+                        </DisableHapticsProvider>
+                      </InAppBrowserProvider>
+                    </HiddenPostsProvider>
+                  </ExternalEmbedsProvider>
+                </LargeAltBadgeProvider>
+              </ConstellationProvider>
+            </DirectFetchRecordsProvider>
+          </GoLinksProvider>
+        </ExternalShareButtonsProvider>
       </AltTextRequiredProvider>
     </LanguagesProvider>
   )

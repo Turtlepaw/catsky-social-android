@@ -19,11 +19,16 @@ import {
   useDirectFetchRecords,
   useSetDirectFetchRecords,
 } from '#/state/preferences/direct-fetch-records'
+import {
+  useSetShowExternalShareButtons,
+  useShowExternalShareButtons,
+} from '#/state/preferences/external-share-buttons'
 import * as SettingsList from '#/screens/Settings/components/SettingsList'
 import {atoms as a} from '#/alf'
 import {Admonition} from '#/components/Admonition'
 import * as Toggle from '#/components/forms/Toggle'
 import {Atom_Stroke2_Corner0_Rounded as ExperimentalIcon} from '#/components/icons/Atom'
+import {ChainLink_Stroke2_Corner0_Rounded as ChainLinkIcon} from '#/components/icons/ChainLink'
 import {Eye_Stroke2_Corner0_Rounded as VisibilityIcon} from '#/components/icons/Eye'
 import {PaintRoller_Stroke2_Corner2_Rounded as PaintRollerIcon} from '#/components/icons/PaintRoller'
 import * as Layout from '#/components/Layout'
@@ -41,6 +46,9 @@ export function ExperimentalSettingsScreen({}: Props) {
 
   const directFetchRecords = useDirectFetchRecords()
   const setDirectFetchRecords = useSetDirectFetchRecords()
+
+  const showExternalShareButtons = useShowExternalShareButtons()
+  const setShowExternalShareButtons = useSetShowExternalShareButtons()
 
   const [gates, setGatesView] = useState(Object.fromEntries(useGatesCache()))
   const dangerousSetGate = useDangerousSetGate()
@@ -116,6 +124,28 @@ export function ExperimentalSettingsScreen({}: Props) {
               <Toggle.LabelText style={[a.flex_1]}>
                 <Trans>
                   TODO: Fall back to constellation api to find blocked replies
+                </Trans>
+              </Toggle.LabelText>
+              <Toggle.Platform />
+            </Toggle.Item>
+          </SettingsList.Group>
+
+          <SettingsList.Group contentContainerStyle={[a.gap_sm]}>
+            <SettingsList.ItemIcon icon={ChainLinkIcon} />
+            <SettingsList.ItemText>
+              <Trans>Bridging and Fediverse</Trans>
+            </SettingsList.ItemText>
+            <Toggle.Item
+              name="external_share_buttons"
+              label={_(
+                msg`Show "Open original post" and "Open post in PDSls" buttons`,
+              )}
+              value={showExternalShareButtons}
+              onChange={value => setShowExternalShareButtons(value)}
+              style={[a.w_full]}>
+              <Toggle.LabelText style={[a.flex_1]}>
+                <Trans>
+                  Show "Open original post" and "Open post in PDSls" buttons
                 </Trans>
               </Toggle.LabelText>
               <Toggle.Platform />
