@@ -510,8 +510,8 @@ msgstr ""
 msgid "⚠Invalid Handle"
 msgstr ""
 
-#: src/screens/Settings/ExperimentalSettings.tsx:132
-#: src/screens/Settings/ExperimentalSettings.tsx:138
+#: src/screens/Settings/ExperimentalSettings.tsx:162
+#: src/screens/Settings/ExperimentalSettings.tsx:168
 msgid "🚧 under construction..."
 msgstr ""
 
@@ -1516,6 +1516,10 @@ msgstr ""
 msgid "Books"
 msgstr ""
 
+#: src/screens/Settings/ExperimentalSettings.tsx:136
+msgid "Bridging and Fediverse"
+msgstr ""
+
 #: src/components/FeedInterstitials.tsx:431
 msgid "Browse more accounts on the Explore page"
 msgstr ""
@@ -2271,7 +2275,7 @@ msgstr ""
 #: src/components/dms/MessageContextMenu.tsx:55
 #: src/components/PostControls/DiscoverDebug.tsx:36
 #: src/components/PostControls/PostMenu/PostMenuItems.tsx:235
-#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:72
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:76
 #: src/lib/sharing.ts:25
 #: src/lib/sharing.ts:41
 #: src/view/com/modals/InviteCodes.tsx:175
@@ -2300,8 +2304,8 @@ msgstr ""
 msgid "Copy at:// URI"
 msgstr ""
 
-#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:152
-#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:155
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:194
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:197
 msgid "Copy author DID"
 msgstr ""
 
@@ -2334,10 +2338,10 @@ msgstr ""
 msgid "Copy link to list"
 msgstr ""
 
-#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:127
-#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:130
-#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:86
-#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:89
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:171
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:174
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:104
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:107
 msgid "Copy link to post"
 msgstr ""
 
@@ -2355,8 +2359,8 @@ msgstr ""
 msgid "Copy message text"
 msgstr ""
 
-#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:143
-#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:146
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:185
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:188
 msgid "Copy post at:// URI"
 msgstr ""
 
@@ -3124,8 +3128,8 @@ msgstr ""
 
 #: src/components/dialogs/Embed.tsx:104
 #: src/components/dialogs/Embed.tsx:108
-#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:118
-#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:123
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:160
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:165
 msgid "Embed post"
 msgstr ""
 
@@ -3373,7 +3377,7 @@ msgstr ""
 msgid "Expected uri to resolve to a record"
 msgstr ""
 
-#: src/screens/Settings/ExperimentalSettings.tsx:61
+#: src/screens/Settings/ExperimentalSettings.tsx:69
 #: src/screens/Settings/FollowingFeedPreferences.tsx:126
 #: src/screens/Settings/Settings.tsx:221
 #: src/screens/Settings/Settings.tsx:224
@@ -3654,7 +3658,7 @@ msgstr ""
 msgid "Failed to verify handle. Please try again."
 msgstr ""
 
-#: src/screens/Settings/ExperimentalSettings.tsx:110
+#: src/screens/Settings/ExperimentalSettings.tsx:118
 msgid "Fall back to constellation api to find blocked replies"
 msgstr ""
 
@@ -3793,8 +3797,8 @@ msgstr ""
 msgid "Fitness"
 msgstr ""
 
-#: src/screens/Settings/ExperimentalSettings.tsx:94
-#: src/screens/Settings/ExperimentalSettings.tsx:100
+#: src/screens/Settings/ExperimentalSettings.tsx:102
+#: src/screens/Settings/ExperimentalSettings.tsx:108
 msgid "FIXME: Fetch records directly from PDS to see through quote blocks"
 msgstr ""
 
@@ -4024,7 +4028,7 @@ msgctxt "from-feed"
 msgid "From <0/>"
 msgstr ""
 
-#: src/screens/Settings/ExperimentalSettings.tsx:147
+#: src/screens/Settings/ExperimentalSettings.tsx:177
 msgid "Gates"
 msgstr ""
 
@@ -5879,7 +5883,7 @@ msgstr ""
 msgid "Note: Bluesky is an open and public network. This setting only limits the visibility of your content on the Bluesky app and website, and other apps may not respect this setting. Your content may still be shown to logged-out users by other apps and websites."
 msgstr ""
 
-#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:133
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:175
 msgid "Note: This post is only visible to logged-in users."
 msgstr ""
 
@@ -6095,8 +6099,22 @@ msgstr ""
 msgid "Open muted words and tags settings"
 msgstr ""
 
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:137
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:140
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:121
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:124
+msgid "Open original post"
+msgstr ""
+
 #: src/screens/Search/components/StarterPackCard.tsx:119
 msgid "Open pack"
+msgstr ""
+
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:148
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:151
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:133
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:136
+msgid "Open post in PDSls"
 msgstr ""
 
 #: src/components/PostControls/PostMenu/index.tsx:64
@@ -6982,12 +7000,12 @@ msgstr ""
 msgid "Reconnect"
 msgstr ""
 
-#: src/screens/Settings/ExperimentalSettings.tsx:75
-#: src/screens/Settings/ExperimentalSettings.tsx:80
+#: src/screens/Settings/ExperimentalSettings.tsx:83
+#: src/screens/Settings/ExperimentalSettings.tsx:88
 msgid "Redirect through go.bsky.app"
 msgstr ""
 
-#: src/screens/Settings/ExperimentalSettings.tsx:71
+#: src/screens/Settings/ExperimentalSettings.tsx:79
 msgid "Redirects"
 msgstr ""
 
@@ -7453,7 +7471,7 @@ msgstr ""
 msgid "Reset code"
 msgstr ""
 
-#: src/screens/Settings/ExperimentalSettings.tsx:162
+#: src/screens/Settings/ExperimentalSettings.tsx:192
 msgid "Reset gates"
 msgstr ""
 
@@ -7975,10 +7993,10 @@ msgstr ""
 msgid "Send verification email"
 msgstr ""
 
-#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:101
-#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:107
-#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:103
-#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:109
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:119
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:125
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:145
+#: src/components/PostControls/ShareMenu/ShareMenuItems.web.tsx:151
 msgid "Send via direct message"
 msgstr ""
 
@@ -8098,8 +8116,8 @@ msgstr ""
 msgid "Share anyway"
 msgstr ""
 
-#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:161
-#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:164
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:205
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:208
 msgid "Share author DID"
 msgstr ""
 
@@ -8114,8 +8132,8 @@ msgstr ""
 msgid "Share link dialog"
 msgstr ""
 
-#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:152
-#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:155
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:196
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:199
 msgid "Share post at:// URI"
 msgstr ""
 
@@ -8136,8 +8154,8 @@ msgstr ""
 msgid "Share this starter pack and help people join your community on Bluesky."
 msgstr ""
 
-#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:117
-#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:120
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:161
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:164
 #: src/screens/ProfileList/components/MoreOptionsMenu.tsx:165
 #: src/screens/ProfileList/components/MoreOptionsMenu.tsx:171
 #: src/screens/StarterPack/StarterPackScreen.tsx:611
@@ -8159,6 +8177,11 @@ msgstr ""
 #: src/components/moderation/LabelPreference.tsx:142
 #: src/components/moderation/PostHider.tsx:137
 msgid "Show"
+msgstr ""
+
+#: src/screens/Settings/ExperimentalSettings.tsx:141
+#: src/screens/Settings/ExperimentalSettings.tsx:147
+msgid "Show \"Open original post\" and \"Open post in PDSls\" buttons"
 msgstr ""
 
 #: src/components/Post/Embed/ExternalEmbed/Gif.tsx:178
@@ -9045,7 +9068,7 @@ msgstr ""
 msgid "There's been a rush of new users to Bluesky! We'll activate your account as soon as we can."
 msgstr ""
 
-#: src/screens/Settings/ExperimentalSettings.tsx:172
+#: src/screens/Settings/ExperimentalSettings.tsx:202
 msgid "These settings might summon nasel demons! Restart the app after changing if anything breaks."
 msgstr ""
 
@@ -9209,7 +9232,7 @@ msgstr ""
 msgid "This post has an unknown type of threadgate on it. Your app may be out of date."
 msgstr ""
 
-#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:142
+#: src/components/PostControls/ShareMenu/ShareMenuItems.tsx:186
 msgid "This post is only visible to logged-in users."
 msgstr ""
 
@@ -9342,7 +9365,7 @@ msgstr ""
 msgid "Today"
 msgstr ""
 
-#: src/screens/Settings/ExperimentalSettings.tsx:117
+#: src/screens/Settings/ExperimentalSettings.tsx:125
 msgid "TODO: Fall back to constellation api to find blocked replies"
 msgstr ""
 
@@ -9406,7 +9429,7 @@ msgstr ""
 msgid "TV"
 msgstr ""
 
-#: src/screens/Settings/ExperimentalSettings.tsx:128
+#: src/screens/Settings/ExperimentalSettings.tsx:158
 msgid "Tweaks"
 msgstr ""
 
@@ -10152,7 +10175,7 @@ msgstr ""
 msgid "Views video in immersive mode"
 msgstr ""
 
-#: src/screens/Settings/ExperimentalSettings.tsx:89
+#: src/screens/Settings/ExperimentalSettings.tsx:97
 msgid "Visibility"
 msgstr ""
 
